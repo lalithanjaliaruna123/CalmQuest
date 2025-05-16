@@ -69,7 +69,7 @@ Open index.html directly in your browser, or
 
 Use VS Code's Live Server for optimal experience
 
-**Usage**
+### Usage
 1. Initial Assessment:
 
 Select your current mood using the emoji tracker

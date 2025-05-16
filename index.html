@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <title>CalmQuest</title>
+   <link rel="shortcut icon" href="favicon.ico?v=2" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container animate__animated animate__fadeIn">
+    <h1><img src="logo (2).png" alt="CalmQuest Logo" class="logo"> CalmQuest</h1>
+    <p id="weather">⏳ Fetching weather data...</p>
+    <div class="mood-tracker">
+      <p>How are you feeling today?</p>
+      <div class="emoji-options">
+        <span data-mood="happy">😊</span>
+        <span data-mood="neutral">😐</span>
+        <span data-mood="sad">😞</span>
+        <span data-mood="crying">😢</span>
+        <span data-mood="angry">😡</span>
+      </div>
+    </div>
+
+    <div id="quiz">
+      <h2>Daily Stress Check-In</h2>
+      <p>Answer these questions to assess your current stress level:</p>
+      
+      <form id="stressForm">
+        <div class="question">
+          <label>1. I feel overwhelmed with tasks.</label><br/>
+          <input type="radio" name="q1" value="3" required /> Often<br/>
+          <input type="radio" name="q1" value="2" /> Sometimes<br/>
+          <input type="radio" name="q1" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>2. I have trouble sleeping due to stress.</label><br/>
+          <input type="radio" name="q2" value="3" required /> Often<br/>
+          <input type="radio" name="q2" value="2" /> Sometimes<br/>
+          <input type="radio" name="q2" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>3. I feel anxious for no clear reason.</label><br/>
+          <input type="radio" name="q3" value="3" required /> Often<br/>
+          <input type="radio" name="q3" value="2" /> Sometimes<br/>
+          <input type="radio" name="q3" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>4. I find it difficult to focus on tasks.</label><br/>
+          <input type="radio" name="q4" value="3" required /> Often<br/>
+          <input type="radio" name="q4" value="2" /> Sometimes<br/>
+          <input type="radio" name="q4" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>5. I experience physical symptoms like headaches or fatigue.</label><br/>
+          <input type="radio" name="q5" value="3" required /> Often<br/>
+          <input type="radio" name="q5" value="2" /> Sometimes<br/>
+          <input type="radio" name="q5" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>6. I feel irritated or angry more than usual.</label><br/>
+          <input type="radio" name="q6" value="3" required /> Often<br/>
+          <input type="radio" name="q6" value="2" /> Sometimes<br/>
+          <input type="radio" name="q6" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>7. I withdraw from social interactions or activities I enjoy.</label><br/>
+          <input type="radio" name="q7" value="3" required /> Often<br/>
+          <input type="radio" name="q7" value="2" /> Sometimes<br/>
+          <input type="radio" name="q7" value="1" /> Rarely
+        </div>
+        <div class="question">
+          <label>8. I feel a constant sense of urgency or restlessness.</label><br/>
+          <input type="radio" name="q8" value="3" required /> Often<br/>
+          <input type="radio" name="q8" value="2" /> Sometimes<br/>
+          <input type="radio" name="q8" value="1" /> Rarely
+        </div>
+        <button type="submit">Check My Stress Level</button>
+      </form>
+    </div>
+
+    <div id="result" class="hidden animate__animated animate__fadeIn">
+      <h2>Your Stress Assessment</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="stress-progress"></div>
+      </div>
+      <p id="stress-level"></p>
+      <p id="suggestion"></p>
+      <div id="breathing-exercise" class="hidden">
+        <h3>🌬️ Breathing Exercise</h3>
+        <div class="circle"></div>
+        <p class="breathing-text">Breathe in...</p>
+        <button id="stop-breathing">Stop Exercise</button>
+      </div>
+
+      <h3>🛌 Coping Measures</h3>
+      <ul id="coping-measures"></ul>
+      <h3>🌟 Today's Affirmation</h3>
+      <p id="affirmation"></p>
+
+      <h3>🌟 Today's Quote</h3>
+      <blockquote id="quote">Loading inspirational quote...</blockquote>
+
+      <button onclick="resetQuiz()">Take Assessment Again</button>
+      <button id="quick-calm">🚨 Quick Calm Technique</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

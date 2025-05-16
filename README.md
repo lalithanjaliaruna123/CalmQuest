@@ -52,7 +52,7 @@ CalmQuest is an interactive web application designed to help users:
 1. Clone the repository:
    ```bash
    git clone https://github.com/lalithanjaliaruna123/CalmQuest.git
-   cd calmquest
+   cd CalmQuest
 2. Set up required files:
 
 Ensure all assets are in place:
